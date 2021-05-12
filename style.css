@@ -1,0 +1,266 @@
+/* https://mediamodifier.com/design# */
+
+body{
+    height: 100vh;
+    width: 100vw;
+}
+.container{
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+h1{
+  text-align: center;
+  color: white;
+    position: relative;
+    font-family: cursive;
+    font-style: oblique;
+    font-weight: 100;
+    font-size: 1rem;
+    width: 10rem;
+}
+h1::before{
+  content:'';
+  background-color: #ffaccca6;
+  top: -6px;
+  left: -15px;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  width: 120%;
+  height: 140%;
+  z-index:-5;
+  transform: skewX(30deg) rotate(10deg);
+}
+h1::after{
+  content:'';
+  background-color: #ff7171;
+  top: -6px;
+  left: -15px;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  width: 120%;
+  height: 140%;
+  z-index:-15;
+  transform: skewX(-50deg) rotate(-10deg);
+}
+a{
+  color: inherit;
+    z-index: 10;
+    position:relative;
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+}
+.btn1 {
+    font-size: 1rem;
+    background-color: #FF4655;
+    padding: 14px 32px;
+    border: none;
+    color: white;
+    margin-top: 2rem;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s;
+    outline: none;
+    text-align: center;
+    font-weight: 900;
+    width: 10rem;
+  }
+
+  .btn1:after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: white;
+    transition: all 0.3s;
+  }
+  .btn1:hover a {
+      color:#FF4655
+  }
+  .btn1:hover:after{
+    width: 100%;
+    color: black;
+  }
+
+
+  .btn2 {
+    font-size: 1rem;
+    background-color: #FF4655;
+    padding: 14px 32px;
+    border: none;
+    color: #FF4655;
+    margin-top: 2rem;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s;
+    outline: none;
+    text-align: center;
+    font-weight: 900;
+    width: 10rem;
+    box-shadow: inset -213px 0px 0px 0px white;
+    border: solid 1px #FF4655;
+    z-index: 5;
+  }
+
+  .btn2:hover{
+    color: rgb(255, 255, 255);
+    box-shadow: inset  0px 0px 0px 0px white;
+  }
+  .btn3>a{
+    right: 4rem;
+    color: #FF4655;
+  }
+  .btn3 {
+    font-size: 1rem;
+    /* background-image: url('./Mediamodifier-Design.svg'); */
+    padding: 15px 35px;
+    border: none;
+    color: rgb(255, 255, 255);
+    margin-top: 2rem;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s;
+    outline: none;
+    text-align: center;
+    font-weight: 900;
+    width: 10rem;
+    border:solid 1px #FF4655;
+
+  }
+
+  .btn3::after{
+    position: absolute;
+    content: '';
+     background-image: url('./Mediamodifier-Design.svg'); 
+     background-repeat: no-repeat;
+    background-size:50%;
+    background-color: rgb(255, 255, 255);
+    background-position: center;
+    top: 0;
+    bottom: 0;
+    left: 85px;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+  }
+
+  .btn3:hover::after{
+    animation-name: rotate; 
+    animation-duration: 2s; 
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+  }
+  @keyframes rotate {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+}
+ 
+
+
+
+
+/* /////////////////////////////////valorant play button//////////////////////////////////////////// */
+.valorant{
+  margin-top: 2rem;
+
+  width: auto;
+  height: auto;
+}
+.border{
+  font-size: 1rem;
+  cursor: pointer;
+  position: relative;
+  width: fit-content;
+  height: fit-content;
+
+}
+.border::before{
+  content: '';
+  position: absolute;
+  border: solid 1px rgb(146, 146, 146);
+  width: 105%;
+  height: 57%;
+  left: -6px;
+  right: 0px;
+  top: -7px;
+  bottom: 0px;
+  border-bottom: none;
+}
+.border::after{
+  content: '';
+  position: absolute;
+  border: solid 1px rgb(146, 146, 146);
+  width: 105%;
+  height: 57%;
+  left: -6px;
+  right: 0px;
+  top: 24px;
+  bottom: 0px;
+    border-top: none;
+
+}
+.btn4 {
+  font-size: 1rem;
+  background-color:#0f1923;
+  background-image: url('/valorant.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 14px 32px;
+  border: none;
+  color: white;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s;
+  outline: none;
+  text-align: center;
+  font-weight: 900;
+  width: 10rem;
+  box-shadow: 2px -2px #FF4655;
+  z-index: 5;
+}
+
+.btn4:hover{
+  background-position-x:13rem;
+  transition: 0.5s ease;
+  box-shadow: 2px -2px #0f1923;
+
+
+}
+
+.btn4::after{
+  content: '';
+  position:absolute;
+  /* border: solid 1px rgb(146, 146, 146); */
+  width: auto;
+    height: auto;
+    left: -7px;
+    right: -7px;
+    top: -7px;
+    bottom: -7px;
+}
+
+.btn4::before{
+  content: '';
+    position: absolute;
+    width: 2%;
+    height: 10%;
+    right: -2px;
+    bottom: 0px;
+    background-color: rgb(0, 0, 0);
+}
+
+.btn4:hover:before{
+  
+    background-color: white;
+    transition: 0.5s ease-out;
+}
+
